@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Transliteration </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">    
+</head>
+<body>
+     <div class="head">
+                <h1>
+                    Transliteration
+                </h1>
+            </div>
+    <div class="div"> 
+        <form method="post">
+            {% csrf_token %}
+           <h1>
+            Search 
+           </h1>
+           
+            <input type="text", name='noun', placeholder="search.."> 
+            <button>Search</button>
+           <style>
+            button{
+                position:absolute;
+                top: 40% ;
+                left: 85%;
+                width: 500px;
+                
+                border-radius:  0 25px 25px 0;
+                padding: 8px;
+                background-color: rgb(243, 198, 85);
+                width: 150px;
+                height: 62px;
+                font-size: 24px;
+                }
+           </style>
+        </form>
+    </div>  
+   
+    
+             
+    <div id="img">
+        <img src="{%static 'images/App_Translate_Language_06_generated.jpg' %}" alt="">
+        
+     </div>
+   
+</body>
+</html>

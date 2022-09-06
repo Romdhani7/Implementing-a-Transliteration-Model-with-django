@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+ 
+</head>
+<body>
+    <div class="result">
+      <table >
+      <caption>DATA_of_Clients</caption>
+      <br>
+      
+      <tr>
+        <th>Noun</th>
+        <th>Date_of_Birth</th>
+        <th>Address</th>
+        <th>Nationality</th>
+        <th>Place_of_Birth</th>
+      </tr>
+      {% for d in data %}
+      <tr>
+      
+        <td>{{d.Noun}}</td>
+        <td>{{d.Datebirth}}</td>
+        <td>{{d.Adress}}</td>
+        <td>{{d.Nationality}}</td>
+        <td>{{d.Place_of_birth}}</td>
+      
+      </tr>
+      {% endfor %} 
+      </table>
+     
+      <div class="img">
+              <img src="{%static 'images/vecteezy_create-quality-blog-articles-with-the-language-translate_.jpg'%}" alt="">
+      </div>
+      <div>
+               <a href="Downloadcsv">Dowload_csv</a>
+               
+      </div>
+    </div>
+</body>
+</html>
